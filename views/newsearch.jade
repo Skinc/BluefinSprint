@@ -1,0 +1,158 @@
+extends layout
+
+block content
+    .container-fluid
+      .row-fluid.row-fluid-2
+        span.span12.span12-1
+          .container-fluid
+            .row-fluid
+              span.span6
+                .row-fluid
+                  span.span6
+                    p.p-1 Title
+                    input.textinput(type='text', name='', placeholder='Placeholder')
+                  span.span6
+              span.span6
+                p.p-1 Field
+                select.pull-left(name='')
+                  option(value='Technology') Technology
+                  option(value='Home Goods') Home Goods
+                  option(value='Sports') Sports
+                  option(value='Fashion') Fashion
+                  option(value='Education') Education
+          .row-fluid
+            span.span12
+              span
+          .container-fluid
+            .row-fluid
+              span.span3
+                p.p-2 Keywords
+                p.p-2  
+              span.span3
+                p.p-2 Importance
+              span.span3
+                p.p-2 Traits
+              span.span3
+                p.p-2 Importance
+                p.p-2  
+            .row-fluid.row-fluid-1
+              span.span3
+                #dom-elem-40.paragraph
+                input.textinput(type='text', placeholder='Placeholder', name='')
+              span.span3
+                select.select-1(name='')
+                  option(value='Low Importance') Low Importance
+                  option(value='Medium Importance') Medium Importance
+                  option(value='High Importance') High Importance
+                p.p-2 Importance
+              span.span3
+                .row-fluid
+                  span.span6
+                    p Age
+                  span.span6
+                    select.select-2(name='')
+                      option(value='All') All
+                      option(value='12-18') 12-18
+                      option(value='19-22') 19-22
+                      option(value='23-30') 23-30
+                      option(value='31-40') 31-40
+                      option(value='41-50') 41-50
+                      option(value='50+') 50+
+              span.span3
+                select.select-1(name='')
+                  option(value='No Importance') No Importance
+                  option(value='Low Importance') Low Importance
+                  option(value='Medium Importance') Medium Importance
+                  option(value='High Importance') High Importance
+            .row-fluid.row-fluid-1
+              span.span3
+                #dom-elem-55.paragraph
+                input.textinput(type='text', placeholder='Placeholder', name='')
+              span.span3
+                select.select-1(name='')
+                  option(value='Low Importance') Low Importance
+                  option(value='Medium Importance') Medium Importance
+                  option(value='High Importance') High Importance
+              span.span3
+                .row-fluid
+                  span.span6
+                    p Location
+                  span.span6
+                    select.select-2(name='')
+                      option(value='USA') USA
+                      option(value='East Coast') East Coast
+                      option(value='South') South
+                      option(value='MidWest') MidWest
+                      option(value='West Coast') West Coast
+              span.span3
+                select.select-1(name='')
+                  option(value='No Importance') No Importance
+                  option(value='Low Importance') Low Importance
+                  option(value='Medium Importance') Medium Importance
+                  option(value='High Importance') High Importance
+            .row-fluid.row-fluid-1
+              span.span3
+                #dom-elem-69.paragraph
+                input.textinput(type='text', placeholder='Placeholder', name='')
+              span.span3
+                select.select-1(name='')
+                  option(value='Low Importance') Low Importance
+                  option(value='Medium Importance') Medium Importance
+                  option(value='High Importance') High Importance
+              span.span3
+                .row-fluid
+                  span.span6
+                    p Gender
+                  span.span6
+                    select.select-2(name='')
+                      option(value='Male') Male
+                      option(value='Female') Female
+              span.span3
+                select.select-1(name='')
+                  option(value='No Importance') No Importance
+                  option(value='Low Importance') Low Importance
+                  option(value='Medium Importance') Medium Importance
+                  option(value='High Importance') High Importance
+            .row-fluid.row-fluid-1
+              span.span3
+                #dom-elem-83.paragraph
+                input.textinput(type='text', placeholder='Placeholder', name='')
+              span.span3
+                select.select-1(name='')
+                  option(value='Low Importance') Low Importance
+                  option(value='Medium Importance') Medium Importance
+                  option(value='High Importance') High Importance
+              span.span3
+                .row-fluid
+                  span.span6
+                    p Formality
+                  span.span6
+                    select.select-2(name='')
+                      option(value='Low') Low
+                      option(value='Medium') Medium
+                      option(value='High') High
+              span.span3
+                select.select-1(name='')
+                  option(value='No Importance') No Importance
+                  option(value='Low Importance') Low Importance
+                  option(value='Medium Importance') Medium Importance
+                  option(value='High Importance') High Importance
+          .row-fluid
+            span.span6
+              p.p-3 Desired Influence
+              .row-fluid
+                span.span4
+                  label.radio.pull-right
+                    input(type='radio', value='', name='')
+                    span Lower Influence, More Results
+                span.span4
+                  label.radio.radio-1
+                    input(type='radio', value='', name='')
+                    span
+                span.span4
+                  label.radio.pull-right
+                    input(type='radio', value='', name='')
+                    span Higher Influence, Fewer Results
+            span.span6
+              button.btn.btn-large.pull-center Submit
+

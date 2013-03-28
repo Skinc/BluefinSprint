@@ -76,7 +76,7 @@ function loginRequired (req, res, next) {
 
 app.get('/', loginRequired, function (req, res) {
   req.api('account/verify_credentials').get(function (err, profile) {
-    res.send('Hi ' + profile.screen_name + '! <form action="/status" method="post"><input name="status"><button>Post Status</button></form>');
+    res.render("newsearch", {title: "SpotOn"});
   });
 });
 
@@ -104,7 +104,7 @@ var carrier = require('carrier');
 
 app.get('/stream', loginRequired, function (req, res) {
   req.api.stream('statuses/filter').post({
-    track: ['engineering', 'computer science']
+    track: ['engineering', 'thanks obama']
   }, function (err, stream) {
     console.log('new stream!!')
     console.log('new stream!!')
