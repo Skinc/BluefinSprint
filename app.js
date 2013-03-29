@@ -79,7 +79,7 @@ function loginRequired (req, res, next) {
 
 app.get('/', loginRequired, function (req, res) {
   req.api('account/verify_credentials').get(function (err, profile) {
-    res.render("newsearch", {title: "n@io"});
+    res.render("newsearch", {title: "n@io", page: 'newsearch'});
   });
 });
 
@@ -90,7 +90,7 @@ app.post('/createsearch', function(req, res){
 
 app.get('/searches', loginRequired, function (req, res) {
   req.api('account/verify_credentials').get(function (err, profile) {
-    res.render("results", {title: "n@io"});
+    res.render("results", {title: "n@io", page: 'searches'});
   });
 });
 
