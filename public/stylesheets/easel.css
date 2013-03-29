@@ -1,0 +1,67 @@
+ body {
+   padding-left: 0;
+   padding-right: 0;
+ }
+ #wholebody .row-fluid.row-fluid-1 {
+   padding: 4px 0px 4px 0px;
+ }
+ #wholebody .row-fluid.row-fluid-2 {
+   padding: 40px 0px 0px 0px;
+ }
+ #wholebody .row-fluid-2 .span12.span12-1 {
+   height: 720px;
+   width: 940px;
+ }
+ #wholebody .row-fluid-2 .span12-1 p.p-1 {
+   font-size: 26px;
+ }
+ #wholebody .row-fluid-2 .span12-1 p.p-2 {
+   font-size: 20px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .Field {
+   width: 200px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .kw1importance {
+   width: 200px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .Age {
+   width: 129px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .ageimportance {
+   width: 200px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .kw2importance {
+   width: 200px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .Location {
+   width: 129px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .locimportance {
+   width: 200px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .kw3importance {
+   width: 200px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .Gender {
+   width: 129px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .genimportance {
+   width: 200px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .kw4importance {
+   width: 200px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .Formality {
+   width: 129px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .forimportance {
+   width: 200px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .p-2.p-3 {
+   text-align: center;
+ }
+ #wholebody .row-fluid-2 .span12-1 .radio.radio-1 {
+   padding: 0px 0px 0px 73px;
+   height: 20px;
+   width: 73px;
+ }

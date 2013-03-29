@@ -3,6 +3,8 @@ var rem = require('rem')
   , express = require('express')
   , path = require('path')
 
+  var mongoose = require('mongoose');
+
 /**
  * Express.
  */
@@ -76,7 +78,7 @@ function loginRequired (req, res, next) {
 
 app.get('/', loginRequired, function (req, res) {
   req.api('account/verify_credentials').get(function (err, profile) {
-    res.render("newsearch", {title: "SpotOn"});
+    res.render("newsearch", {title: "n@io"});
   });
 });
 
@@ -95,6 +97,20 @@ app.post('/status', loginRequired, function (req, res) {
 app.listen(app.get('port'), function () {
   console.log('Listening on http://' + app.get('host'))
 });
+
+
+var tweetSchema = mongoose.Schema({
+  catergory: String,
+  text: String,
+  influence: Number,
+  score: Number,
+  name: String,
+  screen: String,
+  url: String,
+  id: Number,
+});
+
+var Tweet = mongoose.model('Tweet', tweetSchema);
 
 /**
  * Streaming example
@@ -127,3 +143,5 @@ app.get('/stream', loginRequired, function (req, res) {
     });
   });
 })
+
+
