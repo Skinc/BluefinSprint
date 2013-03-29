@@ -20,3 +20,26 @@ a {
 .bar {
     font-size: 22px;
 }
+
+
+.row1{
+	display: inline-block;
+	padding: 5px;
+}
+
+.row{
+	padding: 5px;
+}
+
+#page-wrapper {
+   position: relative;
+   width: 980px;
+   /* centers the document */
+   margin: 0 auto;
+   /*
+  hides anything drawn off canvas.
+  remove overflow and height to see things drawn off canvas.
+  */
+   overflow: hidden;
+   height: 1000px;
+ }

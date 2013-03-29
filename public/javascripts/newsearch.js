@@ -36,4 +36,7 @@ $(function() {
             age: Age, ageimp: Ageimp, loc: Loc, locimp: Locimp, gen: Gen, genimp: Genimp, form: For, forimp: Forimp 
         });
     })
+    $("#toggler").click(function(){
+        $("#people").toggle();
+    })
 })

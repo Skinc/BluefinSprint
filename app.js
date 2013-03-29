@@ -87,6 +87,12 @@ app.post('/createsearch', function(req, res){
   res.send("hi")
 })
 
+app.get('/searches', loginRequired, function (req, res) {
+  req.api('account/verify_credentials').get(function (err, profile) {
+    res.render("results", {title: "n@io"});
+  });
+});
+
 
 app.post('/status', loginRequired, function (req, res) {
   req.api('statuses/update').post({

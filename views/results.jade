@@ -1,0 +1,58 @@
+extends layout
+
+block content
+  #page-wrapper
+    div(class='searches')
+      div
+        h3(class='searchTitle') Technology: 
+      .well
+        div(class='row')
+          div(class='row1')
+            h4 Field:
+          div(id='field', class='row1')
+            p Engineering
+          div(class='row1')
+            h4 Found:
+          div(id='found', class='row1')
+            p 200
+          div(class='row1')
+            h4 Connectedness:
+          div(id='connect', class='row1')
+            p 50
+          div(class='row1')
+            h4 Keywords:
+          div(id='keywords', class='row1')
+            p engineering, javascript, programming, google, apple, microsoft
+        div(class='row')
+          a(id='toggler', href='#') Show/Hide
+        br
+        div(id='people')
+          include _people
+
+    div(class='searches')
+      div
+        h3(class='searchTitle') Art: 
+      .well
+        div(class='row')
+          div(class='row1')
+            h4 Field:
+          div(id='field', class='row1')
+            p Art
+          div(class='row1')
+            h4 Found:
+          div(id='found', class='row1')
+            p 500
+          div(class='row1')
+            h4 Connectedness:
+          div(id='connect', class='row1')
+            p 100
+          div(class='row1')
+            h4 Keywords:
+          div(id='keywords', class='row1')
+            p photography, design, art
+        div(class='row')
+          a(href='#') Show/Hide
+        br
+        div(class='people')
+
+
