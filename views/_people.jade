@@ -1,19 +1,8 @@
-table(class = "table table-bordered table-striped table-hover")
-  thead
-    tr
-      th Name
-      th Relevant Tweet
-      th Influence
-      th Connectedness
-      th Connect!
-  tbody
-
-    each tweet, i in tweets
-      tr
-        th(class='name') #{tweet.name}
-        th(class='tweet') #{tweet.text}
-        th(class='influence') #{tweet.influence}
-        th(class='connectedness') #{tweet.score}
-        th(class='buttons') 
-          a(href="http://twitter.com")
-            img(src='http://www.georgetowncupcake.com/images/twitter_logo.gif')
+tr
+  th(class='name') #{tweet.name}
+  th(class='tweet') #{tweet.text}
+  th(class='influence') #{tweet.influence}
+  th(class='connectedness') #{tweet.score}
+  th(class='buttons') 
+    a(href="http://twitter.com")
+      img(src='http://www.georgetowncupcake.com/images/twitter_logo.gif')

@@ -40,6 +40,9 @@ $(function() {
         });
     })
     $("#toggler").click(function(){
-        $("#people").toggle();
+        $("#tech").toggle();
+    })
+    $("#toggler2").click(function(){
+        $("#art").toggle();
     })
 })

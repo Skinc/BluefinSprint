@@ -14,11 +14,11 @@ block content
           div(class='row1')
             h4 Found:
           div(id='found', class='row1')
-            p 200
+            p 239
           div(class='row1')
             h4 Connectedness:
           div(id='connect', class='row1')
-            p 50
+            p 56.7
           div(class='row1')
             h4 Keywords:
           div(id='keywords', class='row1')
@@ -26,8 +26,18 @@ block content
         div(class='row')
           a(id='toggler', href='#') Show/Hide
         br
-        div(id='people')
-          include _people
+        div(id='tech')
+          table(class = "table table-bordered table-striped table-hover")
+            thead
+              tr
+                th Name
+                th Relevant Tweet
+                th Influence
+                th Connectedness
+                th Connect!
+            tbody
+              each tweet, i in tech
+                include _people
 
     div(class='searches')
       div
@@ -41,18 +51,29 @@ block content
           div(class='row1')
             h4 Found:
           div(id='found', class='row1')
-            p 500
+            p 451
           div(class='row1')
             h4 Connectedness:
           div(id='connect', class='row1')
-            p 100
+            p 99.89
           div(class='row1')
             h4 Keywords:
           div(id='keywords', class='row1')
             p photography, design, art
         div(class='row')
-          a(href='#') Show/Hide
+          a(id='toggler2', href='#') Show/Hide
         br
-        div(class='people')
+        div(id='art')
+          table(class = "table table-bordered table-striped table-hover")
+            thead
+              tr
+                th Name
+                th Relevant Tweet
+                th Influence
+                th Connectedness
+                th Connect!
+            tbody
+              each tweet, i in art
+                include _people
 
 
