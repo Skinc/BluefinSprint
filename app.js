@@ -24,6 +24,7 @@ app.configure(function () {
   app.use(express.session());
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
+  mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/spoton');
 });
 
 app.configure('development', function () {
