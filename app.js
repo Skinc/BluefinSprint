@@ -77,6 +77,27 @@ function loginRequired (req, res, next) {
   }
 }
 
+function uniqueSubSet(elements,set){
+  var subSet = [];
+  for (var i = 0; i < elements; i++){
+    var element = randomChoice(set);
+    while (subSet.indexOf(element) > -1){
+      element = randomChoice(set);
+    }
+    subSet.push(element)
+  }
+  return subSet;
+}
+
+function randomChoice(list){
+  var index = randInt(0,list.length-1);
+  return list[index];
+}
+
+function randInt(min,max){
+  return Math.floor(Math.random()*(max - min + 1))+min;
+}
+
 app.get('/', loginRequired, function (req, res) {
   req.api('account/verify_credentials').get(function (err, profile) {
     res.render("newsearch", {title: "n@io"});
@@ -84,8 +105,15 @@ app.get('/', loginRequired, function (req, res) {
 });
 
 app.post('/createsearch', function(req, res){
-  console.log(req.body)
-  res.send("hi")
+  // console.log(req.body)
+  category = req.body.field;
+  var tweets = Tweet.find().where('category').equals(category).where('score').gt(40).exec(function(err,tweets){
+    if (err){
+      console.log("error", err);   
+    }
+    tweets = uniqueSubSet(10,tweets);
+    res.render('displayResults',{title: 'n@io', tweets: tweets});
+  })
 })
 
 app.get('/searches', loginRequired, function (req, res) {
@@ -113,7 +141,7 @@ app.listen(app.get('port'), function () {
 
 
 var tweetSchema = mongoose.Schema({
-  catergory: String,
+  category: String,
   text: String,
   influence: Number,
   score: Number,
