@@ -2,9 +2,9 @@ doctype 5
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/easel.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='http://code.jquery.com/jquery.js')
     script(src='/javascripts/newsearch.js')
   body
@@ -15,14 +15,14 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand(href='#') #{title}
+          a.brand.title(href='#') #{title}
           .nav-collapse.collapse
             ul.nav
               li.active
-                a(href='#') New Search
+                a.bar(href='#') New Search
               li
-                a(href='#rules') Searches
+                a.bar(href='#rules') Searches
               li
-                a(href='#contact') People
+                a.bar(href='#contact') People
               .container(id='page')
       block content

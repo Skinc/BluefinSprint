@@ -82,6 +82,12 @@ app.get('/', loginRequired, function (req, res) {
   });
 });
 
+app.post('/createsearch', function(req, res){
+  console.log(req.body)
+  res.send("hi")
+})
+
+
 app.post('/status', loginRequired, function (req, res) {
   req.api('statuses/update').post({
     status: req.body.status
