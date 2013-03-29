@@ -18,11 +18,23 @@ html
           a.brand.title(href='#') #{title}
           .nav-collapse.collapse
             ul.nav
-              li.active
-                a.bar(href='#') New Search
-              li
-                a.bar(href='/searches') Searches
-              li
-                a.bar(href='#contact') People
+              if (page == 'newsearch')
+                li.active
+                  a.bar(href='/') New Search
+              else
+                li
+                  a.bar(href='/') New Search
+              if (page == 'searches')
+                li.active
+                  a.bar(href='/searches') Searches
+              else      
+                li
+                  a.bar(href='/searches') Searches
+              if (page == 'people')
+                li.active
+                  a.bar(href='/people') People
+              else
+                li
+                  a.bar(href='/people') People
               .container(id='page')
       block content

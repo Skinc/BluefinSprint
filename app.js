@@ -100,7 +100,7 @@ function randInt(min,max){
 
 app.get('/', loginRequired, function (req, res) {
   req.api('account/verify_credentials').get(function (err, profile) {
-    res.render("newsearch", {title: "n@io"});
+    res.render("newsearch", {title: "n@io", page: 'newsearch'});
   });
 });
 
@@ -118,7 +118,7 @@ app.post('/createsearch', function(req, res){
 
 app.get('/searches', loginRequired, function (req, res) {
   req.api('account/verify_credentials').get(function (err, profile) {
-    res.render("results", {title: "n@io"});
+    res.render("results", {title: "n@io", page: 'searches'});
   });
 });
 
@@ -163,22 +163,7 @@ app.get('/stream', loginRequired, function (req, res) {
   req.api.stream('statuses/filter').post({
     track: ['engineering', 'thanks obama']
   }, function (err, stream) {
-    console.log('new stream!!')
-    console.log('new stream!!')
-    console.log('new stream!!')
-    console.log('new stream!!')
-    console.log('new stream!!')
-    console.log('new stream!!')
-    console.log(stream)
     carrier.carry(stream, function (line) {
-      console.log('new line!!')
-      console.log('new line!!')
-      console.log('new line!!')
-      console.log('new line!!')
-      console.log('new line!!')
-      console.log('new line!!')
-      
-      console.log(line)
       var line = JSON.parse(line);
       res.write(line.text + '\n');
     });
