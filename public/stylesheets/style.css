@@ -35,11 +35,10 @@ a {
    position: relative;
    width: 980px;
    /* centers the document */
-   margin: 0 auto;
-   /*
-  hides anything drawn off canvas.
-  remove overflow and height to see things drawn off canvas.
-  */
-   overflow: hidden;
-   height: 1000px;
- }
+   margin:0 auto;
+
+}
+
+#everything{
+  margin-top: 60px;
+}

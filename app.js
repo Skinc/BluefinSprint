@@ -118,7 +118,14 @@ app.post('/createsearch', function(req, res){
 
 app.get('/searches', loginRequired, function (req, res) {
   req.api('account/verify_credentials').get(function (err, profile) {
-    res.render("results", {title: "n@io", page: 'searches'});
+    var tweets = Tweet.find().where('category').equals("Technology").where('score').gt(40).exec(function(err,tweets){
+      if (err){
+        console.log("error", err);   
+      }
+      tweets = uniqueSubSet(10,tweets);
+      console.log(tweets);
+      res.render('results',{title: 'n@io', tweets: tweets, page:'searches'});
+    })
   });
 });
 
