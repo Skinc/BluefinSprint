@@ -135,22 +135,7 @@ app.get('/stream', loginRequired, function (req, res) {
   req.api.stream('statuses/filter').post({
     track: ['engineering', 'thanks obama']
   }, function (err, stream) {
-    console.log('new stream!!')
-    console.log('new stream!!')
-    console.log('new stream!!')
-    console.log('new stream!!')
-    console.log('new stream!!')
-    console.log('new stream!!')
-    console.log(stream)
     carrier.carry(stream, function (line) {
-      console.log('new line!!')
-      console.log('new line!!')
-      console.log('new line!!')
-      console.log('new line!!')
-      console.log('new line!!')
-      console.log('new line!!')
-      
-      console.log(line)
       var line = JSON.parse(line);
       res.write(line.text + '\n');
     });
