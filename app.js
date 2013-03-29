@@ -104,15 +104,22 @@ app.get('/', loginRequired, function (req, res) {
   });
 });
 
+app.get('/test', function (req, res) {
+  res.render("newsearch", {title: "n@io", page: 'newsearch'});
+})
+
 app.post('/createsearch', function(req, res){
   // console.log(req.body)
+  console.log("level 1")
   category = req.body.field;
   var tweets = Tweet.find().where('category').equals(category).where('score').gt(40).exec(function(err,tweets){
+    console.log("level 2")
     if (err){
       console.log("error", err);   
     }
-    tweets = uniqueSubSet(10,tweets);
-    res.render('displayResults',{title: 'n@io', tweets: tweets});
+    tweets = uniqueSubSet(10, tweets);
+    console.log(tweets)
+    res.render('results',{title: 'n@io', page: "searches",tweets: tweets});
   })
 })
 

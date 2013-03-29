@@ -34,6 +34,9 @@ $(function() {
         $.post("/createsearch", {title: Title, field: Field, 
             kw1: KW1, kw1imp: KW1imp, kw2: KW2, kw2imp: KW2imp, kw3: KW3, kw3imp: KW3imp, kw4: KW4, kw4imp: KW4imp,
             age: Age, ageimp: Ageimp, loc: Loc, locimp: Locimp, gen: Gen, genimp: Genimp, form: For, forimp: Forimp 
+        }, function(data){
+            console.log(data)
+             window.location="/searches";
         });
     })
     $("#toggler").click(function(){

@@ -17,7 +17,6 @@ block content
                 p.p-1 Field
                 select.pull-left.Field(name='')
                   option(value='Technology') Technology
-                  option(value='Art') Technology
                   option(value='Home Goods') Home Goods
                   option(value='Sports') Sports
                   option(value='Fashion') Fashion
@@ -49,7 +48,7 @@ block content
               span.span3
                 .row-fluid
                   span.span4
-                    p Age
+                    p.p-3 Age
                   span.span8
                     select.Age(name='')
                       option(value='All') All
@@ -77,7 +76,7 @@ block content
               span.span3
                 .row-fluid
                   span.span4
-                    p Location
+                    p.p-3 Location
                   span.span8
                     select.Location(name='')
                       option(value='USA') USA
@@ -103,7 +102,7 @@ block content
               span.span3
                 .row-fluid
                   span.span4
-                    p Gender
+                    p.p-3 Gender
                   span.span8
                     select.Gender(name='')
                       option(value='Male') Male
@@ -126,7 +125,7 @@ block content
               span.span3
                 .row-fluid
                   span.span4
-                    p Formality
+                    p.p-3 Formality
                   span.span8
                     select.Formality(name='')
                       option(value='Low') Low
@@ -140,19 +139,27 @@ block content
                   option(value='High Importance') High Importance
           .row-fluid
             span.span6
-              p.p-2.p-3 Desired Influence
+              p.p-2.p-4 Desired Influence
               .row-fluid
                 span.span4
-                  label.radio.pull-right
-                    input(type='radio', value='', name='')
-                    span Lower Influence, More Results
+                  p.p-3 Lower Influence
+                  p.p-3  More People
                 span.span4
-                  label.radio.radio-1
-                    input(type='radio', value='', name='')
-                    span
+                  .row-fluid.row-fluid-3
+                    span.span4
+                      label.radio.radio-1
+                        input(type='radio', value='', name='')
+                        span
+                    span.span4
+                      label.radio.radio-2
+                        input(type='radio', value='', name='')
+                        span
+                    span.span4
+                      label.radio.pull-right.radio-3
+                        input(type='radio', value='', name='')
+                        span
                 span.span4
-                  label.radio.pull-right
-                    input(type='radio', value='', name='')
-                    span Higher Influence, Fewer Results
+                  p.p-3 More Influence
+                  p.p-3  Less People
             span.span6
               button.btn.btn-large.pull-center.submit Submit

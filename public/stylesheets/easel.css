@@ -9,14 +9,17 @@
    padding: 40px 0px 0px 0px;
  }
  #wholebody .row-fluid-2 .span12.span12-1 {
-   height: 720px;
    width: 940px;
+   height: 720px;
  }
  #wholebody .row-fluid-2 .span12-1 p.p-1 {
    font-size: 26px;
  }
  #wholebody .row-fluid-2 .span12-1 p.p-2 {
    font-size: 20px;
+ }
+ #wholebody .row-fluid-2 .span12-1 p.p-3 {
+   font-size: 17px;
  }
  #wholebody .row-fluid-2 .span12-1 .Field {
    width: 200px;
@@ -57,11 +60,18 @@
  #wholebody .row-fluid-2 .span12-1 .row-fluid-1 .forimportance {
    width: 200px;
  }
- #wholebody .row-fluid-2 .span12-1 .p-2.p-3 {
+ #wholebody .row-fluid-2 .span12-1 .p-2.p-4 {
    text-align: center;
  }
- #wholebody .row-fluid-2 .span12-1 .radio.radio-1 {
-   padding: 0px 0px 0px 73px;
-   height: 20px;
-   width: 73px;
+ #wholebody .row-fluid-2 .span12-1 .row-fluid.row-fluid-3 {
+   padding: 15px 0px 0px 0px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-3 .radio.radio-1 {
+   padding: 0px 0px 0px 25px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-3 .radio.radio-2 {
+   padding: 0px 0px 0px 27px;
+ }
+ #wholebody .row-fluid-2 .span12-1 .row-fluid-3 .radio.radio-3 {
+   padding: 0px 14px 0px 20px;
  }
